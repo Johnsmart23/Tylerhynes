@@ -1,34 +1,565 @@
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+*{
     padding: 0;
-}
-
-nav ul {
-    list-style-type: none;
-    background-color: #333;
-    overflow: hidden;
+    background-color: #000;
+    color: #fff;
     margin: 0;
-    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
-nav ul li {
-    float: left;
-}
-
-nav ul li a {
-    display: block;
-    color: white;
+nav {
     text-align: center;
-    padding: 14px 16px;
+    gap: 300px;
+    padding: 20px;
+    align-items: center;
+}
+nav h1 a{
+    color: red;
+    text-decoration: none;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    list-style-type: none; 
+    padding: 10px; 
+    margin: 0; 
+}
+nav ul li{
+    background-color: transparent;
+}
+nav li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: inherit;
+}
+
+nav li a:hover {
+    color: red;
+}
+
+.flowing{
+    padding: 40px;
+}
+.flow{
+    padding-left: 40px;
+    display: flex;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+}
+.right img{
+    width: 50%;
+}
+.right img:hover{
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+}
+
+.left img{
+    width: 100%;
+}
+
+.left img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+#about{
+    padding: 40px;
+}
+
+.abt a{
     text-decoration: none;
 }
 
-nav ul li a:hover {
-    background-color: #111;
+b{
+    color: red;
+    padding: 5px;
 }
 
-h1 {
+#contact{
+    padding: 40px;
+}
+
+.copyright p{
+    text-align: center;
+    color: grey;
+}
+
+hr{
+    color: gray;
+}
+
+/*About page*/
+
+#About{
+    padding: 40px;
+}
+
+.Abt h1{
+    color: grey;
     padding: 20px;
+}
+
+.Abt img{
+    width: 40%;
+}
+
+p{
+    padding: 5px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: red;
+}
+
+/*Contact page*/
+
+
+#Contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 50px;
+  font-family: 'Arial', sans-serif;
+  flex-wrap: wrap; 
+}
+
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+  max-width: 50%;
+  text-align: left;
+}
+
+.contact-right {
+  flex: 1;
+  min-width: 300px;
+  max-width: 50%;
+}
+
+.contact-left p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.contact-left img {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.contact-left .fa {
+  margin-right: 8px;
+  color: #007BFF;
+}
+
+.contact-right form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-right input,
+.contact-right textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: none;
+}
+
+.contact-right button.btn2 {
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-right button.btn2:hover {
+  background-color: #0056b3;
+}
+
+/* Camera page*/
+
+#images-pic .pic-pic {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 10px;
+}
+
+#images-pic .pic-pic img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#images-pic .pic-pic img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+        padding: 10px 20px;
+        flex-wrap: wrap;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        padding: 10px;
+        justify-content: center;
+        gap: 10px;
+        transition: none;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    .flow {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .left, .right {
+        flex: 1;
+    }
+
+    .left img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right img {
+        width: 50%;
+    }
+
+    #Contact {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px;
+    }
+
+    .contact-left,
+    .contact-right {
+        max-width: 100%;
+    }
+
+    #images-pic .pic-pic {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}*{
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+nav {
+    text-align: center;
+    gap: 300px;
+    padding: 20px;
+    align-items: center;
+}
+nav h1 a{
+    color: red;
+    text-decoration: none;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    list-style-type: none; 
+    padding: 10px; 
+    margin: 0; 
+}
+nav ul li{
+    background-color: transparent;
+}
+nav li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: inherit;
+}
+
+nav li a:hover {
+    color: red;
+}
+
+.flowing{
+    padding: 40px;
+}
+.flow{
+    padding-left: 40px;
+    display: flex;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+}
+.right img{
+    width: 50%;
+}
+.right img:hover{
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+}
+
+.left img{
+    width: 100%;
+}
+
+.left img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+#about{
+    padding: 40px;
+}
+
+.abt a{
+    text-decoration: none;
+}
+
+b{
+    color: red;
+    padding: 5px;
+}
+
+#contact{
+    padding: 40px;
+}
+
+.copyright p{
+    text-align: center;
+    color: grey;
+}
+
+hr{
+    color: gray;
+}
+
+/*About page*/
+
+#About{
+    padding: 40px;
+}
+
+.Abt h1{
+    color: grey;
+    padding: 20px;
+}
+
+.Abt img{
+    width: 40%;
+}
+
+p{
+    padding: 5px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: red;
+}
+
+/*Contact page*/
+
+
+#Contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 50px;
+  font-family: 'Arial', sans-serif;
+  flex-wrap: wrap; 
+}
+
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+  max-width: 50%;
+  text-align: left;
+}
+
+.contact-right {
+  flex: 1;
+  min-width: 300px;
+  max-width: 50%;
+}
+
+.contact-left p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.contact-left img {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.contact-left .fa {
+  margin-right: 8px;
+  color: #007BFF;
+}
+
+.contact-right form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-right input,
+.contact-right textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: none;
+}
+
+.contact-right button.btn2 {
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-right button.btn2:hover {
+  background-color: #0056b3;
+}
+
+/* Camera page*/
+
+#images-pic .pic-pic {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 10px;
+}
+
+#images-pic .pic-pic img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#images-pic .pic-pic img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+        padding: 10px 20px;
+        flex-wrap: wrap;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        padding: 10px;
+        justify-content: center;
+        gap: 10px;
+        transition: none;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    .flow {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .left, .right {
+        flex: 1;
+    }
+
+    .left img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right img {
+        width: 50%;
+    }
+
+    #Contact {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px;
+    }
+
+    .contact-left,
+    .contact-right {
+        max-width: 100%;
+    }
+
+    #images-pic .pic-pic {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
