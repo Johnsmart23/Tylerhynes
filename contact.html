@@ -1,24 +1,41 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
     <link rel="stylesheet" href="style.css">
+    <title>About</title>
 </head>
 <body>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Fans</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">In front of camera</a></li>
         </ul>
     </nav>
-    <h1>Contact</h1>
-    <p>Welcome to the Contact page.</p>
-    <img src="images/sample.jpg" alt="Sample Image">
+
+        <div id="Contact">
+                <div class="contact-left">
+                    For all business inquiries submit email. 
+                    <p><a href="#" class="fa fa-paper-plane"></a>tylerhynes22889@gmail.com</p>
+                    <img src="images/7.jpg">
+                </div>
+                <div class="contact-right">
+                    <form action="https://formspree.io/f/mldbdjan" method="POST">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    
+                </div>
+            </div>
+            <hr>
+        <div class="copyright">
+            <p>Copyright © Tyler Hynes.</p>
+        </div>
 </body>
 </html>
